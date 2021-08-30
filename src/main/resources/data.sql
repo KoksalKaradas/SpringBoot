@@ -1,13 +1,15 @@
-DROP TABLE IF EXISTS billionaires;
+DROP TABLE IF EXISTS customer;
 
-CREATE TABLE billionaires (
-  id INT AUTO_INCREMENT  PRIMARY KEY,
-  first_name VARCHAR(250) NOT NULL,
-  last_name VARCHAR(250) NOT NULL,
-  career VARCHAR(250) DEFAULT NULL
+create table customer (
+    customer_num bigint not null,
+    city varchar(255),
+    district varchar(255),
+    name varchar(255),
+    surname varchar(255),
+    primary key (customer_num)
 );
 
-INSERT INTO billionaires (first_name, last_name, career) VALUES
-  ('Aliko', 'Dangote', 'Billionaire Industrialist'),
-  ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
-  ('Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
+INSERT INTO customer (customer_num, name, surname, city, district) VALUES
+  (1, 'Adam', 'Avery', 'Maryland', 'Baltimore'),
+  (2, 'Joseph', 'Bower', 'Nebraska', 'Lincoln'),
+  (3, 'Liam', 'Campbell', 'New Jersey', 'Trenton');
